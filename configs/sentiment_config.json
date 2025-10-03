@@ -1,0 +1,26 @@
+{
+  "use_real_data": true,
+  "fallback_to_mock": true,
+  "apis": {
+    "gemini": {
+      "enabled": false,
+      "api_key": "your_gemini_api_key_here"
+    },
+    "pytrends": {
+      "enabled": true,
+      "keywords": ["coinbase", "coinbase app", "coinbase login"],
+      "geo": "",
+      "hl": "en-US"
+    },
+    "reddit": {
+      "enabled": true,
+      "subreddit": "cryptocurrency",
+      "rate_limit": 0.3
+    }
+  },
+  "mock_data": {
+    "q3_trend_up": true,
+    "volatility": 0.02,
+    "base_factor": 0.98
+  }
+}

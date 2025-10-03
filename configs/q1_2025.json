@@ -1,0 +1,23 @@
+{
+  "quarter": "Q1 2025",
+  "reference_total": 341565000,
+  "interest": {
+    "fiat_balance": 20000000000,
+    "fiat_rate": 0.0535,
+    "fiat_share": 0.20,
+    "usdc_balance": 28000000000,
+    "usdc_rate": 0.0535,
+    "usdc_share": 0.0030
+  },
+  "staking": {
+    "eth_staked_units": 28000000,
+    "eth_price": 3300,
+    "reward_apr": 0.042,
+    "take_rate": 0.105
+  },
+  "custody": {
+    "auc": 130000000000,
+    "fee_bps": 0.00015
+  },
+  "other": 1700000
+}

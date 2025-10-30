@@ -76,7 +76,7 @@ Provide 3 columns with overrides:
 **Sensitivity (bottom):**
 Table varying Take Rate ±0.0005 and Aug/Sep Notional ±10%. Show Δ in Total_Rev.
 
-## Data Provenance (for your 100-word blurb)
+## Data Provenanc
 
 Management July txn revenue and S&S guide bounds for Q3 (anchor)
 Fed funds daily (for interest)
@@ -85,7 +85,7 @@ ETH staked supply & reward rate (staking)
 AUC (custody)
 Alt-data: Google Trends, Reddit mentions + sentiment
 
-## 100-word write-up (paste into submission)
+
 
 I anchor Q3 using Coinbase's reported Q2 mix and Q3 outlook. July transaction revenue is fixed from management's guide; Aug/Sep transaction revenue flex with a blended take-rate and an alt-data sentiment multiplier derived from Google Trends, Reddit mentions, and tone (bounded ±5%). Subscriptions & Services is modeled bottom-up from public ex-ante drivers: fiat and USDC interest (Fed funds and supply), staking (ETH staked base, price, reward APR, Coinbase take), custody (AUC × fee bps), and other. The same framework back-tests within ≤0.05% on Q1'25 and Q2'25. Deliverable is a one-tab sheet with scenarios and sensitivities.
 
@@ -101,7 +101,7 @@ I anchor Q3 using Coinbase's reported Q2 mix and Q3 outlook. July transaction re
    - **Total Revenue** = Transactions + S&S ✓.  
    - Shows **Base/Bull/Bear** plus a small sensitivity table ✓.
 
-## 📊 Sentiment Factor Details
+## Sentiment Factor Details
 
 The sentiment factor combines:
 - **Google Trends** (40%): search volume for "coinbase", "coinbase app", "coinbase login"
@@ -130,14 +130,14 @@ python scripts/build_sentiment_factor.py --start 2025-07-01 --end 2025-09-30
 python model/create_forecast.py
 ```
 
-## 🔒 Notes & guardrails
+##  Notes & guardrails
 
 - Keep sentiment factor capped to ±5% and do not apply it to July (management already anchored July txn revenue).
 - S&S calibration comes from ex-ante drivers (no peeking at actual print); if you change inputs, re-run tests and keep error ≤0.05% on Q1/Q2.
 - If Pushshift throttles, the script already sleeps; reduce size or increase delay if needed.
 - For the final Google Sheet, gray the editable inputs and lock formulas to keep it judge-Friendly.
 
-## 🧪 Testing
+## Testing
 
 All tests verify:
 - ✅ Backtest accuracy ≤0.05% for both quarters
